@@ -48,7 +48,7 @@ def getTreeFromRules(rules):
 
 
 def predict(tree, row):
-    if int(row[tree['index']-1]) <= tree['value']:
+    if int(row[tree['index']]) <= tree['value']:
         if isinstance(tree['left'], dict):
             return predict(tree['left'], row)
         else:
