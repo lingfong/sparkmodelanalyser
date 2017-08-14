@@ -27,8 +27,8 @@ def getTreeSide(rules,target,side):
                 if i<=target+1:
                     continue
                 tab_count2 = rule.count('\t')
-                if tab_count2==tab_count+1:    #Else的下一行
-                    targeti=i
+                if tab_count2==tab_count:    
+                    targeti=i+1         #Else的下一行
                     break
         rule=rules[targeti]
         rule_content=rule.lstrip()
